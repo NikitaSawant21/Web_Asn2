@@ -1,0 +1,25 @@
+<h1>{{title}}</h1>
+
+<style>
+  .highlight {
+    background-color: #ffdddd;
+  }
+</style>
+
+<table border="1" cellpadding="8">
+  <thead>
+    <tr>
+      <th>Movie ID</th>
+      <th>Movie Name</th>
+      <th>Genres</th>
+      <th>Language</th>
+      <th>Duration</th>
+      <th>Metascore</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each movies}}
+      {{> _movieRow }}
+    {{/each}}
+  </tbody>
+</table>

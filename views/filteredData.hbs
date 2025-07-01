@@ -1,0 +1,20 @@
+<h1>{{title}}</h1>
+
+<table border="1" cellpadding="8">
+  <thead>
+    <tr>
+      <th>Movie ID</th>
+      <th>Movie Name</th>
+      <th>Genres</th>
+      <th>Language</th>
+      <th>Metascore</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each movies}}
+      {{#hasMetascore Metascore}}
+        {{> _movieRow }}
+      {{/hasMetascore}}
+    {{/each}}
+  </tbody>
+</table>
